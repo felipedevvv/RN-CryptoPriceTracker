@@ -1,14 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import ListItem from './components/ListItem';
 
 import { SAMPLE_DATA } from './assets/data/sampleData';
 
+const ListHeader = () => {
+
+}
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.titleWrapper}>
         <Text style={styles.largeTitle}>Markets</Text>
       </View>
@@ -27,7 +31,7 @@ export default function App() {
         )}
       />
 
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -41,7 +45,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   titleWrapper: {
-    marginTop: 80,
+    marginTop: 20,
     paddingHorizontal: 16,
   },
   divider: {
