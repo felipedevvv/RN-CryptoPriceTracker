@@ -16,7 +16,7 @@ export default function App() {
       <FlatList
         keyExtractor={(item) => item.id}
         data={SAMPLE_DATA}
-        renderItem={({item}) => {
+        renderItem={({item}) => (
           <ListItem 
           name={item.name}
           symbol={item.symbol}
@@ -24,7 +24,7 @@ export default function App() {
           priceChangePercentage7d={item.price_change_percentage_7d_in_currency}
           logoUrl={item.image}
           />
-        }}
+        )}
       />
 
     </View>
